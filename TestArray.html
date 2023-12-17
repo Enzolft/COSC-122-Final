@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Display</title>
+</head>
+<body>
+    <h1>Array Content</h1>
+    <div id="arrayContent"></div>
+
+    <script>
+        var myArray = new Array(4);
+        myArray[3] = 3;
+        myArray[2] = 6;
+        myArray[1] = 6;
+        myArray[0] = 39;
+
+        var arrayDisplay = document.getElementById('arrayContent');
+        myArray.forEach(function(item, index) {
+            arrayDisplay.innerHTML += 'Index ' + index + ': ' + item + '<br>';
+        });
+    </script>
+</body>
+</html>
