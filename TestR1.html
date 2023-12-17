@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Register Calculation and Conversion</title>
+</head>
+<body>
+    <h1>Register Calculation and Conversion to Hex</h1>
+    <p id="calculationResult"></p>
+    <p id="hexConversionResult"></p>
+
+    <script>
+        // 第一步：计算 R1 的值
+        // 将十六进制值转换为十进制
+        var memory_52 = 0x5;  // 5 in hex
+        var memory_56 = 0xA;  // A in hex
+        var memory_60 = 0x2;  // 2 in hex
+
+        // 根据指令计算 R1 的值
+        var R0 = memory_52;  // 5
+        var R1 = memory_56;  // 10
+        var R2 = R0 * R1;    // 5 * 10
+        R0 = memory_60;      // 2
+        R1 = R0 + R2;        // 2 + 50
+
+        // 显示计算结果
+        document.getElementById("calculationResult").innerHTML = "The calculated value of R1 is: " + R1;
+
+        // 第二步：将 R1 的十进制值转换为十六进制
+        var hexNumber = R1.toString(16);
+
+        // 显示转换结果
+        document.getElementById("hexConversionResult").innerHTML = "The hexadecimal representation of " + R1 + " is: " + hexNumber;
+    </script>
+</body>
+</html>
