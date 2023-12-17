@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Variable Display</title>
+</head>
+<body>
+    <h1>Values of A and B</h1>
+    <div id="results"></div>
+
+    <script>
+        var A, B;
+
+        A = 3;
+        B = 6;
+        A = B + B / A;
+        B = A * 5 + 3 * 2;
+
+        var resultString = "Value of A: " + A + "<br>" + "Value of B: " + B;
+        document.getElementById("results").innerHTML = resultString;
+        document.write(A+"<br>"+B);
+    </script>
+</body>
+</html>
